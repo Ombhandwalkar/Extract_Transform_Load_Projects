@@ -1,0 +1,20 @@
+[2025-06-25T06:55:20.687+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-25T06:55:20.734+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Iphone_Scraping.minimum_price scheduled__2025-06-25T06:54:00+00:00 [queued]>
+[2025-06-25T06:55:20.767+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Iphone_Scraping.minimum_price scheduled__2025-06-25T06:54:00+00:00 [queued]>
+[2025-06-25T06:55:20.768+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-25T06:55:20.804+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): minimum_price> on 2025-06-25 06:54:00+00:00
+[2025-06-25T06:55:20.820+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=857) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-25T06:55:20.824+0000] {standard_task_runner.py:72} INFO - Started process 859 to run task
+[2025-06-25T06:55:20.824+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Iphone_Scraping', 'minimum_price', 'scheduled__2025-06-25T06:54:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/Web_scraping.py', '--cfg-path', '/tmp/tmpj2o1j7s2']
+[2025-06-25T06:55:20.830+0000] {standard_task_runner.py:105} INFO - Job 22: Subtask minimum_price
+[2025-06-25T06:55:20.934+0000] {task_command.py:467} INFO - Running <TaskInstance: Iphone_Scraping.minimum_price scheduled__2025-06-25T06:54:00+00:00 [running]> on host ef8c6abb536a
+[2025-06-25T06:55:21.079+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Iphone_Scraping' AIRFLOW_CTX_TASK_ID='minimum_price' AIRFLOW_CTX_EXECUTION_DATE='2025-06-25T06:54:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-25T06:54:00+00:00'
+[2025-06-25T06:55:21.081+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-25T06:55:21.190+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-25T06:55:21.208+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-25T06:55:21.210+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Iphone_Scraping, task_id=minimum_price, run_id=scheduled__2025-06-25T06:54:00+00:00, execution_date=20250625T065400, start_date=20250625T065520, end_date=20250625T065521
+[2025-06-25T06:55:21.284+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-25T06:55:21.311+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-25T06:55:21.314+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

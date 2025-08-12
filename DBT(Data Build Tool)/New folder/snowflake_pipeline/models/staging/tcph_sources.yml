@@ -1,0 +1,64 @@
+version: 2
+
+sources:
+  - name: tpch
+    database: snowflake_sample_data
+    schema: tpch_sf1
+    tables:
+      - name: orders
+        columns:
+          - name: o_orderkey
+            tests:
+              - unique
+              - not_null
+      - name: lineitem
+        columns:
+          - name: l_orderkey
+            tests:
+              - relationships:
+                  to: source('tpch', 'orders')
+                  field: o_orderkey
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# version: 2
+# # We are referring the existing sample database of snowflake  named- tpch
+# soruces:
+#   - name: tpch
+#     database: snowflake_sample_data # Database name
+#     schema: tpch_sf1 # Schema Name 
+#     tables:
+#       - name: orders # "Orders" Table 
+#         columns: 
+#           - name: o_orderkey # Primary Key 
+#             tests:  # Certain conditions 
+#               - unique
+#               - not_null
+#       - name: lineitem # Second  "lineitem" Table
+#         columns:
+#           - name: l_orderkey # Primary key 
+#             tests:  
+#               - relationships:
+#                   to: source('tpch','orders')  # It is telling that This "l_orderkey" is foreign key for the "orders" Table's  "o_orderkey"
+#                   field: o_orderkey

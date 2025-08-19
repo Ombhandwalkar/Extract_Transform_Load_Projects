@@ -1,0 +1,54 @@
+# Instll zip version of apache kafka
+    wget https://downloads.apache.org/kafka/3.9.1/kafka_2.13-3.9.1.tgz
+# Unzip kafka 
+    tar -xvf kafka_2.13-3.9.1.tgz
+
+-----------------------
+# So you know kafka runs on javajdk version. So install java 
+    java -version
+    sudo yum install java-24.0.1-openjdk
+    java -version
+    cd kafka_2.13-3.9.1 
+
+# Start Zoo-keeper: Zoo-keeper acts as centralized service for managing and coordinating the kafka brokers   
+-------------------------------
+    bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Open another window to start kafka
+# But first ssh to to your ec2 machine as done above - available in ec2 instance SSH client.
+    ssh -i "kafka-stock-market.pem" ec2-user@ec2-13-51-201-186.eu-north-1.compute.amazonaws.com
+
+
+# Start Kafka-server:
+----------------------------------------
+# Duplicate the session & enter in a new console --
+
+# This will allocate a certain storage to kafka server.
+    export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
+
+    cd kafka_2.12-3.3.1
+
+# Issue is that- It has the private ip, which need to change to pulic.
+# change the yaml file- to public. Restart the all server 
+
+# start kafka server 
+    bin/kafka-server-start.sh config/server.properties
+
+
+
+
+Create the topic:
+-----------------------------
+Duplicate the session & enter in a new console --
+cd kafka_2.12-3.3.1
+bin/kafka-topics.sh --create --topic demo_testing2 --bootstrap-server {Put the Public IP of your EC2 Instance:9092} --replication-factor 1 --partitions 1
+
+Start Producer:
+--------------------------
+bin/kafka-console-producer.sh --topic demo_testing2 --bootstrap-server {Put the Public IP of your EC2 Instance:9092} 
+
+Start Consumer:
+-------------------------
+Duplicate the session & enter in a new console --
+cd kafka_2.12-3.3.1
+bin/kafka-console-consumer.sh --topic demo_testing2 --bootstrap-server {Put the Public IP of your EC2 Instance:9092}

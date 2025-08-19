@@ -1,0 +1,49 @@
+[0m23:31:40.094806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F8A1E0DA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F89ACBC80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F8A3771A0>]}
+
+
+============================== 23:31:40.114856 | 2cd12788-9b86-4731-9e46-e40aeeb05680 ==============================
+[0m23:31:40.114856 [info ] [MainThread]: Running with dbt=1.10.9
+[0m23:31:40.114856 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\ombha\\.dbt', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt init', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'None', 'printer_width': '80', 'quiet': 'False', 'indirect_selection': 'eager', 'log_path': 'logs', 'write_json': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m23:31:46.805881 [debug] [MainThread]: Starter project path: B:\Major_Git\DATA_ENGINEERING\DBT(Data Build Tool)\BTC Data Analysis- DBT\venv\Lib\site-packages\dbt\include\starter_project
+[0m23:31:46.870342 [info ] [MainThread]: 
+Your new dbt project "BTC" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:31:46.870342 [info ] [MainThread]: Setting up your profile.
+[0m23:34:59.058965 [info ] [MainThread]: Profile BTC written to C:\Users\ombha\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:34:59.070566 [debug] [MainThread]: Command `dbt init` succeeded at 23:34:59.070566 after 199.31 seconds
+[0m23:34:59.070566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F8BD6B500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F8C7CB860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F8C230770>]}
+[0m23:34:59.075269 [debug] [MainThread]: Flushing usage events
+[0m23:35:02.129967 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:38:24.861347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E1241A6C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E14FF74A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E14FF5100>]}
+
+
+============================== 23:38:24.867976 | 64e42875-8a5d-48e3-91cc-2bb34f2f5d69 ==============================
+[0m23:38:24.867976 [info ] [MainThread]: Running with dbt=1.10.9
+[0m23:38:24.867976 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\ombha\\.dbt', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt debug', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'None', 'log_cache_events': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'write_json': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m23:38:24.916302 [info ] [MainThread]: dbt version: 1.10.9
+[0m23:38:24.921831 [info ] [MainThread]: python version: 3.12.3
+[0m23:38:24.922380 [info ] [MainThread]: python path: B:\Major_Git\DATA_ENGINEERING\DBT(Data Build Tool)\BTC Data Analysis- DBT\venv\Scripts\python.exe
+[0m23:38:24.924276 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m23:38:26.133986 [info ] [MainThread]: Using profiles dir at C:\Users\ombha\.dbt
+[0m23:38:26.138632 [info ] [MainThread]: Using profiles.yml file at C:\Users\ombha\.dbt\profiles.yml
+[0m23:38:26.142397 [info ] [MainThread]: Using dbt_project.yml file at B:\Major_Git\DATA_ENGINEERING\DBT(Data Build Tool)\BTC Data Analysis- DBT\dbt_project.yml
+[0m23:38:26.144484 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m23:38:26.146958 [debug] [MainThread]: Command `dbt debug` failed at 23:38:26.145919 after 1.55 seconds
+[0m23:38:26.146958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E1241A6C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E175ADFD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025E16BEEE10>]}
+[0m23:38:26.146958 [debug] [MainThread]: Flushing usage events
+[0m23:38:29.732489 [debug] [MainThread]: An error was encountered while trying to flush usage events

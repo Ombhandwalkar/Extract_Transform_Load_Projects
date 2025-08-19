@@ -1,0 +1,53 @@
+# 🛠️ Data Engineering Workflow – Customer Transactions Pipeline
+
+## 📌 Overview
+This project demonstrates an **end-to-end data engineering workflow** for processing **customer transactions and labeled data**.  
+It showcases how to build a modern data pipeline with **Apache Airflow**, **Python**, **PostgreSQL**, **MySQL**, **Amazon S3**, **Snowflake**, and **SODA** for data quality checks.
+
+The pipeline covers:
+1. **Triggers** – Generate transaction & detection data using Python.  
+2. **Write** – Store raw and labeled data into S3 and load them into the Data Warehouse (Snowflake).  
+3. **Audit** – Run **SODA** quality checks to ensure clean and reliable data.  
+4. **Publish** – Create customer metrics tables for dashboards and reporting.  
+
+---
+
+## 🎥 Demo Video
+
+[![Demo Video](https://img.youtube.com/vi/jDvIzTbG5zk/0.jpg)](https://youtu.be/jDvIzTbG5zk)
+
+
+## ⚙️ Workflow Architecture
+
+![alt text](<workflow.png>)
+
+
+## 🚀 Components Used
+### 1.  **Data Generation (Triggers)**
+
+* transaction_generator.py → produces synthetic customer transactions.
+
+* detection_generator.py → produces labeled transactions.
+
+* Data is stored in PostgreSQL and MySQL.
+
+### 2. **Data Storage (Write)**
+
+* Data from source databases is ingested into Amazon S3 (raw zone).
+
+* From S3, data is loaded into Snowflake for analytics.
+
+### 3. **Data Quality (Audit)**
+
+* SODA runs data quality checks on Snowflake tables.
+
+* Ensures schema validation, null checks, and data consistency.
+
+### 4. **Data Transformation**
+
+* Transformations create customer metrics tables in Snowflake by using DBT.
+
+
+
+## ⚙️ Automated DAG(Directed Acyclic Graph) Architecture
+![alt text](<dag.png>)
